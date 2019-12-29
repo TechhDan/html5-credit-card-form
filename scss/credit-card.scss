@@ -1,0 +1,53 @@
+#credit-card-html5-container {
+  margin: 100px auto;
+}
+
+#credit-card-html5-container {
+  border: 1px solid lightgrey;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    'title title title'
+    'owner owner cvv'
+    'cardNumber cardNumber cardNumber'
+    'expirationDate expirationDate cards'
+    'confirm confirm confirm';
+  > p {
+    grid-area: title;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  > .owner { grid-area: owner; }
+  > .cvv { grid-area: cvv; }
+  > .card-number { grid-area: cardNumber; }
+  > .expiration-date { grid-area: expirationDate; }
+  > .cards {
+    grid-area: cards;
+    text-align: right;
+    img {
+      height: 35px;
+    }
+  }
+  > input[type="submit"] {
+    grid-area: confirm;
+    color: white;
+    background: grey;
+    background: linear-gradient(60deg, #00BCD4 0%, #03A9F4 100%);
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+  }
+  sup {
+    display: block;
+  }
+  input {
+    width: 100%;
+    padding: 5px 0px;
+  }
+  select {
+    padding: 5px 0px;
+  }
+}
